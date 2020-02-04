@@ -5,13 +5,15 @@
   <div class="row">
     <div class="col-lg-5">
     <div class="col-xs-5 cus-show"style= "width: 500px;">
-      <h4 class="with-line">顧客情報<span class="fa fa-user form-control-icon" aria-hidden="true"></span></h4>
+      <div class ="text-color">
+      <h4 class="new-disc">Fans Information</h4>
+    </div>
         <table class="table">
           <tbody>
               <%= form_for(@customer,url: customers_customer_path) do |f| %>
                   <div class="form group">
                     <div class="form-inline">
-                      <button type="button" class=" col-sm-2 btn-xs btn-success show-btn" disabled="disabled">お名前</button>
+                      <button type="button" class=" col-sm-2 btn-xs btn-dark show-btn" disabled="disabled">お名前</button>
                       <div class="col-sm-10"style= "padding:0px,2px;">
                         <%= f.text_field :last_name,id:"customer_last_name",placeholder:"名前",rows: 7,class: "form-control", :size => "10*10" %>
                         <%= f.text_field :first_name,id:"customer_first_name",placeholder:"名前",rows: 7,class: "form-control",:size => "10*10"%>
@@ -20,7 +22,7 @@
             </div>
                   <div class="form group">
                     <div class="form-inline">
-                      <button type="button" class=" col-sm-2 btn-xs btn-success show-btn" disabled="disabled">お名前（カナ）</button>
+                      <button type="button" class=" col-sm-2 btn-xs btn-dark show-btn" disabled="disabled">お名前(カナ)</button>
                     <div class="col-sm-10" style= "padding:15px;">
                       <%= f.text_field :last_name_kana,id:"customer_last_name_kana",placeholder:"名前（カナ）",rows: 7,class: "form-control",:size => "10*10"%>
                       <%= f.text_field :first_name_kana,id:"customer_first_name_kana",placeholder:"名前（カナ）",rows: 7,class: "form-control",:size => "10*10"%>
@@ -29,7 +31,7 @@
                  </div>
                   <div class="form group">
                     <div class="form-inline">
-                      <button type="button" class="col-lg-2 btn-xs btn-success show-btn" disabled="disabled">住所1</button>
+                      <button type="button" class="col-lg-2 btn-xs btn-dark show-btn" disabled="disabled">住所1</button>
                       <div class="col-sm-10" style= "padding:0px,4px;">
                       <%= f.text_field :postal_code,id:"customer_postal_code",placeholder:"郵便番号",rows: 7,class: "form-control",:size => "10*10"%>
                     </div>
@@ -41,7 +43,7 @@
           </div>
                   <div class="form group">
                     <div class="form-inline">
-                      <button type="button" class="col-lg-2 btn-xs btn-success show-btn" disabled="disabled">電話番号</button>
+                      <button type="button" class="col-lg-2 btn-xs btn-dark show-btn" disabled="disabled">電話番号</button>
                       <div class="col-sm-10" style= "padding:0px,3px;">
                         <%= f.text_field :phone_number,id:"customer_phone_number",placeholder:"電話番号",rows: 7,class: "form-control",:size => "10*10"%>
                     </div>
@@ -49,15 +51,15 @@
               </div>
                   <div class="form group">
                     <div class="form-inline">
-                     <button type="button" class="col-lg-2 btn-xs btn-success show-btn" disabled="disabled">email</button>
+                     <button type="button" class="col-lg-2 btn-xs btn-dark show-btn" disabled="disabled">email</button>
                      <div class="col-sm-10" style= "padding:10px;">
                       <%= f.text_field :email,id:"customer_email",placeholder:"メールアドレス",rows: 7,class: "form-control"%>
                     </div>
                   </div>
               </div>
               <div class="actions">
-            <%= f.submit "保存", method: :PATCH, class:"btn-info btn-sm",:size => "10*10" %>
-            <%= link_to "退会する", customers_customers_hide_path(@customer), method: :put, data: { confirm: '本当に削除して良いですか?',cancel: 'やめる',commit: '削除する'}, title: '削除確認' %>
+            <%= f.submit "保存", method: :PATCH, class:"btn btn-block btn-dark btn-sm ",:size => "10*10" %>
+            <%= link_to "退会する",customers_customers_hide_path(@customer), method: :put, class:"btn btn-block btn-light btn-sm ", data: { confirm: '本当に削除して良いですか?',cancel: 'やめる',commit: '削除する'}, title: '削除確認' %>
          </div>
           </tbody>
         </table>

@@ -1,24 +1,36 @@
-# README
+![README](https://user-images.githubusercontent.com/57278128/73643501-f95f8380-46b6-11ea-8a6f-0898e794f29d.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Name（リポジトリ/プロジェクト/OSSなどの名前）
+vivily
 
-Things you may want to cover:
+アーティスト名
 
-* Ruby version
 
-* System dependencies
+DEMO
+"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
 
-* Configuration
+Features
+ファン同士でのチャットが可能。埋め込みでの動画視聴、音楽試聴が可能。
 
-* Database creation
+Requirement
+"hoge"を動かすのに必要なライブラリなどを列挙する
 
-* Database initialization
+huga 3.5.2
+hogehuga 1.0.2
+Installation
+Requirementで列挙したライブラリなどのインストール方法を説明する
 
-* How to run the test suite
+pip install huga_package
+Usage
+DEMOの実行方法など、"hoge"の基本的な使い方を説明する
 
-* Services (job queues, cache servers, search engines, etc.)
+git clone https://github.com/hoge/~
+cd examples
+python demo.py
+Note
+注意点などがあれば書く
 
-* Deployment instructions
-
-* ...
+機能一覧
+・ブログ、ライブ、ニュース投稿機能
+・音楽、動画投稿機能
+・

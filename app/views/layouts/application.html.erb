@@ -84,9 +84,6 @@
           <%= link_to 'Room', customers_rooms_path, class: "btn-default", style: "margin-left: 5px; margin-top: 33px;" %>
         </li>
         <li>
-          <%= link_to 'About', customers_homes_about_path, class: "btn-default", style: "margin-left: 20px; margin-top: 33px;" %>
-        </li>
-        <li>
           <%= link_to 'Topic', customers_topics_path(current_customer.id), class: "btn-default", style: "margin-left: 5px; margin-top: 33px;" %>
         </li>
         <li>
@@ -101,9 +98,11 @@
         <li>
           <%= link_to 'Log Out', destroy_customer_session_path, method: :delete, class: "btn-default", style: "margin-left: 5px; margin-top: 33px;" %>
         </li>
+      <div class="text-color">
         <p class="navbar-text navbar-right">
         Welcome!　Mr.<%= current_customer.last_name %><%= current_customer.first_name %>
         </p>
+      </div>
       </ul>
     </nav>
   </header>
@@ -136,10 +135,10 @@
           <%= link_to "Video", customers_videos_path, class: "btn-default", style: "margin-left: 5px; margin-top: 33px;" %>
         </li>
         <li>
-          <%= link_to "Crew Sign Up", new_customer_registration_path, class: "btn-default", style: "margin-left: 5px; margin-top: 33px;" %>
+          <%= link_to "Crew Log In", new_customer_registration_path, class: "btn-default", style: "margin-left: 5px; margin-top: 33px;" %>
         </li>
         <li>
-          <%= link_to "Crew Sign In", new_customer_session_path, class: "btn-default", style: "margin-left: 5px; margin-top: 33px;" %>
+          <%= link_to "Crew Page", customers_homes_about_path, class: "btn-default", style: "margin-left: 5px; margin-top: 33px;" %>
         </li>
         </br>
       </ul>
