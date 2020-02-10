@@ -8,13 +8,13 @@
 			  <div class = "row">
 				<%= form_for @movie,:url => {:action => :create} do |f|%>
 			      <b>Movie Title</b>
-				    <%= f.text_field :title, class:"form-control", placeholder: "Movie Title" %>
+				    <%= f.text_field :title, class:"form-control", placeholder: "movie title" %>
 				  <b>Image</b>
 					<%= f.attachment_field :image %>
 				  <b>Movie</b>
 					<%= f.file_field :movie %>
 			    <div class="new-actions">
-				  <%= f.submit "保存", class:"btn btn-dark btn-lg btn-block" %>
+				  <%= f.submit "save", class:"btn btn-dark btn-lg btn-block" %>
 				</div>
 				<% end %>
 				  <div class="col-md-9 col-md-offset-2">

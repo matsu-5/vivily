@@ -5,5 +5,6 @@ class Customers::VideosController < ApplicationController
 
   def index
   	@video = Video.all
+  	@video = Video.page(params[:page]).per(8).order(created_at: "DESC")
   end
 end

@@ -1,22 +1,26 @@
 <div class="top_image">
   <div class="content">
     <div class="container">
-	  <div class="row">
-      <div class="wrapper">
-        <div class="col-md-9 col-md-offset-0">
-		  <h2 class="new-video">Video</h2>
+      <div class="col-md-11 col-md-offset-2">
+        <div class="row">
+  		    <h2 class="new-video">Video</h2>
+        </div>
+        <div class="row">
           <% @video.each do |video| %>
-          <span class="fadeInUp">
             <image class="img-fluid">
-            	<%= link_to customers_video_path(video) do %>
-			    <%= attachment_image_tag video, :image, size: "200x200" %>
-			    <% end %>
+              <figure class="snip1353">
+  			        <%= attachment_image_tag video, :image, size: "300x300" %>
+              <figcaption>
+                  <h2> <%= link_to 'Play!!', customers_video_path(video) %></h2>
+                </figcaption>
+              </figure>
 			      </image>
-          </span>
           <% end %>
+          <div class = "col-md-9 col-md-offset-5">
+            <%= paginate @video, class: "paginate" %>
+          </div>
         </div>
       </div>
     </div>
     </div>
   </div>
-</div>

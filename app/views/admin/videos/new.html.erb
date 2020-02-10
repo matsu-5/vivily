@@ -8,7 +8,7 @@
 			  <div class = "row">
 				<%= form_for @video,:url => {:action => :create} do |f|%>
 				  <b>Video Title</b>
-					<%= f.text_field :title, class:"form-control", placeholder: "Video Title" %>
+					<%= f.text_field :title, class:"form-control", placeholder: "video title" %>
 				  <b>Image</b>
 					<%= f.attachment_field :image %>
 				  <b>Video</b>

@@ -1,23 +1,36 @@
 <div class="top_image">
   <div class="content">
     <div class="container">
-	  <div class="row">
-		<div class="col-md-9 col-md-offset-0">
-	       <h2 class="new-disc">discography</h2>
-	       <nav>
-               <ul class="float-left">
+	  <div class="col-md-11 col-md-offset-2">
+	  	<div class="row">
+		  <h2 class="new-disc">discography</h2>
+
+               <ul class="col-md-9 col-md-offset-4 category-name">
       	         <li>
-	               <%= @category.name %>
-                </li>
+      	           <%= link_to 'All', customers_discs_path %>
+                   <% @categories.each do |category| %>
+            	     <%= link_to "/customers/category/#{category.id}" do %>
+	                   <%= category.name %>(<%= category.discs.count %>)
+                     <% end %>
+          		   <% end %>
+                 </li>
                </ul>
-             </nav>
+         <div class="row">
 		   <% @discs.each do |disc| %>
 		     <image class="example_image">
+		     	<figure class="snip1283">
 		  	     <%= link_to admin_disc_path(disc) do %>
-			     <%= attachment_image_tag disc, :image, size: "200x200" %>
+			       <%= attachment_image_tag disc, :image, size: "300x300" %>
+				     <figcaption>
+					    <div class="read-more">
+					      <%= link_to 'Go to Detail Page!!', customers_disc_path(disc) %>
+					    </div>
+					  </figcaption>
+					</figure>
 			     <% end %>
 		     </image>
 		   <% end %>
+		</div>
 	    </div>
 	  </div>
     </div>

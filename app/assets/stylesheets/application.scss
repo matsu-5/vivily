@@ -10,11 +10,13 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bxslider
  *= require_tree .
  *= require_self
  */
 @import "bootstrap";
 @import "summernote-bs4";
+@import "bxslider";
 @import url('https://fonts.googleapis.com/css?family=Just+Another+Hand&display=swap');
 
 .btn-default{
@@ -56,7 +58,7 @@
     background-image: image-url("IMG_6183.JPG");
     background-size: cover;
     background-position: center;
-    height: 1900px
+    height: 2500px
 }
 
 .second_image {
@@ -330,4 +332,237 @@ span{
   font-size: 180px;
   font-family: 'Just Another Hand', cursive;
 }
-//マウスオンアニメーション
+th{
+  font-size: 15px;
+}
+
+.category-name{
+  margin-top: -25px;
+}
+
+
+//マウスホバーアニメーション
+.btn05 {
+    background-color: #fff;
+    color: #fff !important;
+    background-size: 200% 100%; 
+    background-image: -webkit-linear-gradient(left, transparent 50%, rgba(80, 1, 1, 1) 50%);
+    background-image: linear-gradient(to right, transparent 50%, rgba(153, 139, 250, 1) 50%);
+    -webkit-transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
+    transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
+}
+.btn05:hover {
+    background-color: black;
+    background-position: -100% 100%;
+}
+
+.btn05{
+  text-decoration: none;
+}
+
+.btn06 {
+    background-color: black;
+    color: #fff !important;
+    background-size: 200% 100%; 
+    background-image: -webkit-linear-gradient(left, transparent 50%, rgba(80, 1, 1, 1) 50%);
+    background-image: linear-gradient(to right, transparent 50%, rgba(153, 139, 250, 1) 50%);
+    -webkit-transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
+    transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
+}
+.btn06:hover {
+    background-color: black;
+    background-position: -100% 100%;
+}
+
+.btn06{
+  text-decoration: none;
+}
+
+//マウスホバー(image)
+figure.snip1283 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 300px;
+  max-width: 300px;
+  max-height: 290px;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  background-color: #07090c;
+  font-size: 16px;
+  -webkit-perspective: 50em;
+  perspective: 50em;
+}
+figure.snip1283 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+figure.snip1283 img {
+  opacity: 1;
+  width: 100%;
+  -webkit-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+figure.snip1283 figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  z-index: 1;
+  opacity: 0;
+  padding: 20px 30px;
+}
+figure.snip1283 h3,
+figure.snip1283 p {
+  line-height: 1.5em;
+}
+figure.snip1283 h3 {
+  margin: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+figure.snip1283 .read-more {
+  border: 2px solid black;
+  padding: 0px 0px;
+  margin: 90px 50px;
+  font-size: 2em;
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Just Another Hand', cursive;
+}
+figure.snip1283 .read-more:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+figure.snip1283:hover img,
+figure.snip1283.hover img {
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  opacity: 0;
+}
+figure.snip1283:hover figcaption,
+figure.snip1283.hover figcaption {
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+//マウスホバー(image2)
+figure.snip1353 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 300px;
+  max-width: 300px;
+  max-height: 290px;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+}
+figure.snip1353 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+figure.snip1353 img {
+  opacity: 1;
+  width: 100%;
+}
+figure.snip1353:after,
+figure.snip1353:before {
+  background: #ffffff;
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  content: '';
+  opacity: 0.5;
+  -webkit-transition: all 0.55s ease-in-out;
+  transition: all 0.55s ease-in-out;
+  z-index: 1;
+}
+figure.snip1353:after {
+  top: 0;
+  left: 0;
+  -webkit-transform: skew(-45deg) translateX(-150%);
+  transform: skew(-45deg) translateX(-150%);
+}
+figure.snip1353:before {
+  right: 0;
+  bottom: 0;
+  -webkit-transform: skew(-45deg) translateX(150%);
+  transform: skew(-45deg) translateX(150%);
+}
+figure.snip1353 figcaption {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 2;
+}
+figure.snip1353 h2{
+  margin: 0;
+  width: 100%;
+  opacity: 0;
+}
+figure.snip1353 h2 {
+  padding: 0 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 100px;
+  font-family: 'Just Another Hand', cursive;
+}
+
+figure.snip1353 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-top: -70px;
+  position: absolute;
+  z-index: 2;
+}
+figure.snip1353:hover img,
+figure.snip1353.hover img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+figure.snip1353:hover:after,
+figure.snip1353.hover:after {
+  -webkit-transform: skew(-45deg) translateX(-50%);
+  transform: skew(-45deg) translateX(-50%);
+}
+figure.snip1353:hover:before,
+figure.snip1353.hover:before {
+  -webkit-transform: skew(-45deg) translateX(50%);
+  transform: skew(-45deg) translateX(50%);
+}
+figure.snip1353:hover figcaption h2,
+figure.snip1353.hover figcaption h2,{
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+figure.snip1353:hover figcaption h2,
+figure.snip1353.hover figcaption h2 {
+  opacity: 1;
+}

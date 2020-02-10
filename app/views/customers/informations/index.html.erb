@@ -2,19 +2,18 @@
     <div class="content">
      <div class="container">
         <div class="row">
-          <div class="wrapper">
-          <div class="col-md-9 col-md-offset-0">
+          <div class="col-md-9 col-md-offset-3">
           <h1 class="new-information">News</h1>
             <% @information.each do |information| %>
               <div class="example">
-                <p><%= information.created_at.strftime('%Y/%m/%d') %></p><br>
-                <span class="fadeInUp">
-                <button type="button" class="btn btn-light">
+                <button type="button" class="btn btn05">
                   <%= link_to customers_information_path(information) do %>
-                  <%= information.title %>
+                    <div class="text-left">
+                      <%= information.created_at.strftime('%Y/%m/%d') %><br>
+                    </div>
+                      <%= information.title %>
                   <% end %>
                 </button>
-              </span>
                 </div>
                 <hr>
             <% end %>
@@ -23,4 +22,3 @@
         </div>
       </div>
     </div>
-  </div>

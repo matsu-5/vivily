@@ -1,7 +1,7 @@
 class Admin::BlogsController < ApplicationController
   def index
   	@blog = Blog.all
-    @blog = Blog.page(params[:page]).per(14)
+    @blog = Blog.page(params[:page]).per(14).order(created_at: "DESC")
   end
 
   def show

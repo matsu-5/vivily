@@ -6,41 +6,42 @@
           	<h1 class="new-biography">Crew Page</h1>
 	        <div class="video">
 	          <span class="fadeInUp">
-		      <%= video_tag "about_us_01.mp4", class: "landing_video", autoplay: true, loop: true, muted: true, :size => 30*30 %>
-		      <h3 class="new-biography">Contents</h3>
+		      	<%= video_tag "about_us_01.mp4", class: "landing_video", autoplay: true, loop: true, muted: true, :size => 30*30 %>
+		      </span>
+		      <span class="fadeInUp">
+			      <h3 class="new-biography">Contents</h3>
+			        <h2 class="title", style="font-size: 30px;">
+					  <i class="fas fa-sms">チャット機能</i><br>
+				    </h2>
+					<h5 class="text-center", style="font-size: 30px;"> ファンのみんなと仲良くなれる。vivilyのファンになってくれたあなたにはより音楽を好きになってほしい。チャット機能で音楽好きとつながろう！
+					</h5>
 
-		        <h2 class="title", style="font-size: 30px;">
-				  <i class="fas fa-sms">チャット機能</i><br>
-			    </h2>
-				<h5 class="text-center", style="font-size: 30px;"> ファンのみんなと仲良くなれる。vivilyのファンになってくれたあなたにはより音楽を好きになってほしい。チャット機能で音楽好きとつながろう！
-				</h5>
+	                <h2 class="title", style="font-size: 30px;">
+					  <i class="far fa-play-circle">未流通音源試聴</i><br>
+				    </h2>
+					<h5 class="text-center", style="font-size: 30px;">
+					全国のCDショップ、サブスクリプションサービスなどでは聞くことができない音源が視聴可能！
+					あなたのいいねやコメントで発売するかも！？
+					</h5>
 
-                <h2 class="title", style="font-size: 30px;">
-				  <i class="far fa-play-circle">未流通音源試聴</i><br>
-			    </h2>
-				<h5 class="text-center", style="font-size: 30px;">
-				全国のCDショップ、サブスクリプションサービスなどでは聞くことができない音源が視聴可能！
-				あなたのいいねやコメントで発売するかも！？
-				</h5>
+	                 <h2 class="title", style="font-size: 30px;">
+					  <i class="fab fa-youtube">未公開MOVIE試聴</i><br>
+				    </h2>
+					<h5 class="text-center", style="font-size: 30px;">
+					Youtubeでも上げていないMVやメンバーのオフショット映像が視聴可能！
+					</h5>
 
-                 <h2 class="title", style="font-size: 30px;">
-				  <i class="fab fa-youtube">未公開MOVIE試聴</i><br>
-			    </h2>
-				<h5 class="text-center", style="font-size: 30px;">
-				Youtubeでも上げていないMVやメンバーのオフショット映像が視聴可能！
-				</h5>
-
-                <h2 class="title", style="font-size: 30px;">
-				  <i class="fas fa-blog">Blog</i><br>
-			    </h2>
-				<h5 class="text-center", style="font-size: 30px;">
-				メンバーの日々の日常をアップしていく。レコーディングの裏側やライブの舞台裏など貴重な姿をお見せしよう。
-				</h5>
-			  <div class="col-md-9 col-md-offset-2">
-                <div class ="sign_up">
-			      <%= link_to "Crew Sign Up", new_customer_session_path, class: "btn-dark", style: "margin-left: 5px; margin-top: 100px;" %>
-			    </div>
-			   </div>
+	                <h2 class="title", style="font-size: 30px;">
+					  <i class="fas fa-blog">Blog</i><br>
+				    </h2>
+					<h5 class="text-center", style="font-size: 30px;">
+					メンバーの日々の日常をアップしていく。レコーディングの裏側やライブの舞台裏など貴重な姿をお見せしよう。
+					</h5>
+				  <div class="col-md-9 col-md-offset-2">
+	                <div class ="sign_up">
+				      <%= link_to "Crew Sign Up", new_customer_session_path, class: "btn-dark", style: "margin-left: 5px; margin-top: 100px;" %>
+				    </div>
+				   </div>
 			   </span>
               </div>
 		    </div>

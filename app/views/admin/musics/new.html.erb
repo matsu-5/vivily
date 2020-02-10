@@ -8,15 +8,15 @@
 			      <div class="row">
 				    <%= form_for @music,:url => {:action => :create} do |f|%>
 					  <b>Music Name </b><br>
-					      <%= f.text_field :name, class:"form-control", placeholder: "Music Name" %>
+					      <%= f.text_field :name, class:"form-control", placeholder: "music title" %>
 					  <b>画像</b>
 						  <%= f.attachment_field :image %>
 					  <b>音楽</b>
 						  <%= f.file_field :listening %>
-					  <b>vivilyコメント</b>
+					  <b>歌詞</b>
                         <%= f.text_area :comment, 'data-provider': :summernote, src: "./js/summernote/lang/summernote-ja-JP.js" %>
                       <div class="new-actions">
-					    <%= f.submit "save", class:"btn btn-lg btn-block btn-base-1 mt-20 bg-primary" %>
+					    <%= f.submit "save", class:"btn btn-block btn-dark" %>
 					  </div>
 				    <% end %>
 				      <div class="col-md-9 col-md-offset-5">

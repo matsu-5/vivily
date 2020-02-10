@@ -1,44 +1,42 @@
 <div class ="second_image">
   <div class="content">
     <div class = "container">
-      <div class ="text-color">
 	     <div class = "row">
-		 <div class="col-md-9 col-md-offset-0">
-		 	<h2 class="new-music">music</h2>
-		      <h1 class ="font-weight-bold">
+    		 <div class="col-md-9 col-md-offset-3">
+          <div class ="text-color">
+    		 	 <h2 class="new-music">music</h2>
+		         <h1 class ="font-weight-bold">
                 <%= @music.name %>
-              </h1>
-        <image class ="music image">
-          <%= attachment_image_tag @music, :image, size: "300x300" %>
-        </image>
-           <div class = "music">
-              <%= audio_tag(@music.listening, :autoplay => false, :controls => true) %>
-           </div>
-           <div class ="comment">
-            <h2 class="vivily-comment">vivily comment</h2>
-           	<%= @music.comment.html_safe %>
+             </h1>
+             <image class ="music image">
+               <%= attachment_image_tag @music, :image, size: "300x300" %>
+             </image>
+             <div class = "music">
+               <%= audio_tag(@music.listening, :autoplay => false, :controls => true) %>
+             </div>
+             <div class ="comment">
+               <h2 class="vivily-comment">Lyics</h2>
+           	     <%= @music.comment.html_safe %>
+             </div>
+             <h4>Comment</h4>
+                <div id="comments_area"><!-- #① -->
+                  <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
+                  <%= render partial: 'customers/comments/index', locals: { comments: @comments } %>
+                </div>
+              </div>
+                <% if customer_signed_in? %>
+                  <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
+                  <%= render partial: 'customers/comments/form', locals: { comment: @comment, music: @music } %>
+                <% end %>
            </div>
          </div>
-      </div>
+        <div class="row">
+    		<div class="col-md-8 col-md-offset-2">
+    			<div id="music__show_favorite_<%= @music.id %>">
+    			  <%= render 'show_favorite', music: @music %>
+    			</div>
+    		</div>
+    	</div>
     </div>
-    <div>
-    <h4>Comment</h4>
-    <div id="comments_area"><!-- #① -->
-      <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
-      <%= render partial: 'customers/comments/index', locals: { comments: @comments } %>
-    </div>
-    <% if customer_signed_in? %>
-      <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
-      <%= render partial: 'customers/comments/form', locals: { comment: @comment, music: @music } %>
-    <% end %>
   </div>
-    <div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div id="music__show_favorite_<%= @music.id %>">
-			  <%= render 'show_favorite', music: @music %>
-			</div>
-		</div>
-	</div>
-  </div>
-</div>
 </div>

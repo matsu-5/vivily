@@ -1,6 +1,7 @@
 class Customers::DiscsController < ApplicationController
   def index
   	@disc = Disc.all
+    @disc = Disc.page(params[:page]).per(8).order(created_at: "DESC")
   	@categories = Category.all
   end
 

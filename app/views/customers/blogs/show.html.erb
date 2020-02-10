@@ -1,9 +1,9 @@
 <div class ="second_image">
   <div class="content">
      <div class="container">
-      <div class ="text-color">
         <div class="row">
-          <div class="col-md-9 col-md-offset-0">
+          <div class="col-md-9 col-md-offset-3">
+            <div class ="text-color">
           <h1 class="new-blog">Blog</h1>
               <div class="example">
                 <p><%= @blog.created_at.strftime('%Y/%m/%d') %></p><br>
@@ -14,26 +14,25 @@
                 <p><%= @blog.details.html_safe %></p>
               </div>
               <hr>
+            <h4>Comment</h4>
+              <div id="comments_area"><!-- #① -->
+                <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
+                <%= render partial: 'customers/blog_comments/index', locals: { blog_comments: @blog_comments } %>
+              </div>
             </div>
+              <% if customer_signed_in? %>
+                <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
+                <%= render partial: 'customers/blog_comments/form', locals: { blog_comment: @blog_comment, blog: @blog } %>
+              <% end %>
+            <div class="row">
+      		    <div class="col-md-8 col-md-offset-2">
+      			    <div id="blog__show_favorite_<%= @blog.id %>">
+      			      <%= render 'show_favorite', blog: @blog %>
+      			    </div>
+              </div>
+		        </div>
           </div>
+        </div>
       </div>
-      <h4>コメント</h4>
-    <div id="comments_area"><!-- #① -->
-      <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
-      <%= render partial: 'customers/blog_comments/index', locals: { blog_comments: @blog_comments } %>
-    </div>
-    <% if customer_signed_in? %>
-      <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
-      <%= render partial: 'customers/blog_comments/form', locals: { blog_comment: @blog_comment, blog: @blog } %>
-    <% end %>
-  </div>
-      <div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div id="blog__show_favorite_<%= @blog.id %>">
-			  <%= render 'show_favorite', blog: @blog %>
-			</div>
-    </div>
-		</div>
-	  </div>
-   </div>
+	 </div>
 </div>

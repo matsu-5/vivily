@@ -1,59 +1,89 @@
   <div class="top_image">
+    <div class="conteiner-fluid">
+      <ul class="bxslider">
+          <li><img src="/images/baba.png" alt="" width="2000" height="700"></li>
+          <li><img src="/images/IMG_6183.jpg" alt="" width="2000" height="700"></li>
+          <li><img src="/images/IMG_1261.jpg" alt="" width="2000" height="700"></li>
+          <li><img src="/images/IMG_6194.jpg" alt="" width="2000" height="700"></li>
+      </ul>
+    </div>
     <div class="content">
      <div class="container">
       <div class="row">
-          <div class="col-md-9 col-md-offset-0">
+        <div class="wrapper">
+          <div class="col-md-9 col-md-offset-3">
           <h1 class="new-information">News</h1>
             <% @information.each do |information| %>
               <div class="example">
-                <p><%= information.created_at.strftime('%Y/%m/%d') %></p><br>
-                <button type="button" class="btn btn-light">
-                  <%= link_to customers_information_path(information) do %>
-                  <%= information.title %>
-                  <% end %>
-                </button>
-                </div>
-                <hr>
-            <% end %>
-            <div class ="text-center back">
-              <%= link_to 'All News', customers_informations_path, class: "btn-default" %>
-            </div>
+                <span class="fadeInUp">
+                  <button type="button" class="btn btn-light">
+                    <%= link_to customers_information_path(information) do %>
+                      <div class="text-left">
+                        <%= information.created_at.strftime('%Y/%m/%d') %><br>
+                      </div>
+                      <%= information.title %>
+                    <% end %>
+                  </button>
+                  <hr>
+                </span>
+              </div>
+             <% end %>
+                  <div class ="col-md-9 col-md-offset-8 back">
+                    <span class="fadeInUp">
+                      <%= link_to 'All News', customers_informations_path, class: "btn-default" %>
+                    </span>
+                  </div>
           </div>
         </div>
+      </div>
     <div class="row">
-      <div class="col-md-9 col-md-offset-0">
-      	<div class="video-content">
-		  <h2 class="new-video">Video</h2>
-          <% @video.each do |video| %>
-             <div class = "movie">
-               <%= video_tag video.video.to_s, loop: false, controls: true, :playsinline => 'false', autoplay: false, size: "300×150", class: "content embed-responsive-video" %>
-             </div>
-             <% end %>
-            <div class ="text-center back">
-              <%= link_to 'All Videos', customers_videos_path, class: "btn-default" %>
-            </div>
+      <div class="wrapper">
+        <div class="col-md-9 col-md-offset-2">
+        	<div class="video-content">
+  		      <h2 class="new-video">Video</h2>
+            <% @video.each do |video| %>
+               <div class = "movie">
+                <span class="fadeInUp">
+                   <%= video_tag video.video.to_s, loop: false, controls: true, :playsinline => 'false', autoplay: false, size: "300×150", class: "content embed-responsive-video" %>
+                </span>
+               </div>
+               <% end %>
+                <div class ="text-center back">
+                  <span class="fadeInUp">
+                    <%= link_to 'All Videos', customers_videos_path, class: "btn-default" %>
+                  </span>
+                </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-9 col-md-offset-0">
-          <h1 class="new-live">Live</h1>
-            <% @live.each do |live| %>
-              <div class="example">
-                <%= live.created_at.strftime('%Y/%m/%d') %><br>
-                <button type="button" class="btn btn-light">
-                <%= link_to customers_life_path(live) do %>
-                <%= live.title %>
-                <% end %>
-              </button>
-              </div>
+      <div class="wrapper">
+        <div class="col-md-9 col-md-offset-2">
+            <h1 class="new-live">Live</h1>
+              <% @live.each do |live| %>
+                <div class="example">
+                  <span class="fadeInUp">
+                    <button type="button" class="btn btn-light">
+                      <%= link_to customers_life_path(live) do %>
+                        <div class="text-left">
+                          <%= live.created_at.strftime('%Y/%m/%d') %><br>
+                        </div>
+                        <%= live.title %>
+                      <% end %>
+                    </button>
+                  </span>
+                </div>
                 <hr>
-          <% end %>
-            <div class ="text-center back">
-              <%= link_to 'All Live', customers_lives_path, class: "btn-default" %>
+              <% end %>
+              <div class ="col-md-9 col-md-offset-6 back">
+                <span class="fadeInUp">
+                  <%= link_to 'All Live', customers_lives_path, class: "btn-default" %>
+                </span>
+              </div>
             </div>
           </div>
         </div>
-    </div>
+      </div>
   </div>
 </div>

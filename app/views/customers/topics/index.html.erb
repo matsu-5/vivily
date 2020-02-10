@@ -3,24 +3,22 @@
     <div class="container">
       <div class ="text-color">
         <div class="row">
-          <div class="wrapper">
           <div class="col-md-9 col-md-offset-0">
           <h1 class="new-topic">topic</h1>
             <% @topics.each do |topic| %>
               <div class="example">
-                  <p><%= topic.created_at.strftime('%Y/%m/%d') %></p><br>
-            <span class="fadeInUp">
-              <button type="button" class="btn btn-light">
+              <button type="button" class="btn btn06">
+                <div class="text-left">
+                  <%= topic.created_at.strftime('%Y/%m/%d') %><br>
+                </div>
                 <%= link_to customers_topic_path(topic) do %>
-                <%= topic.title %>
+                  <%= topic.title %>
                 <% end %>
               </button>
-            </span>
                </div>
                 <hr>
             <% end %>
           </div>
-        </div>
         </div>
       </div>
     </div>

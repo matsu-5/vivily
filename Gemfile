@@ -74,6 +74,7 @@ gem 'carrierwave'
 gem 'carrierwave-audio'
 gem 'summernote-rails', '~> 0.8.12.0'
 gem 'data-confirm-modal'
+gem 'bxslider-rails'
 
 group :production do
   gem 'mysql2'

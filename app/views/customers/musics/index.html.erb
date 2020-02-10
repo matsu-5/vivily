@@ -3,20 +3,16 @@
     <div class="container">
       <div class ="text-color">
   	    <div class="row">
-  	      <div class="wrapper">
-  	      <div class="col-md-9 col-md-offset-0">
+  	      <div class="col-md-9 col-md-offset-3">
 		    <h2 class="new-music">Music</h2>
 		      <% @music.each do |music| %>
-		        <span class="fadeInUp">
 			    <image class="example_image">
 			      <%= link_to customers_music_path(music) do %>
-			        <%= attachment_image_tag music, :image, size: "200x200" %>
+			        <%= attachment_image_tag music, :image, size: "300x300" %>
 		          <% end %>
 		        </image>
-		        </span>
 		      <% end %>
 		    </div>
-          </div>
           </div>
         </div>
       </div>

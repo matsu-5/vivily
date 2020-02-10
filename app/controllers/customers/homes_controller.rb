@@ -12,6 +12,7 @@ class Customers::HomesController < ApplicationController
   	@information = Information.all.order(created_at: :desc).limit(3)
   	@live = Live.all.order(created_at: :desc).limit(3)
   	@video = Video.all.order(created_at: :desc).limit(1)
+    @disc = Disc.all
   end
 
   def top_third
