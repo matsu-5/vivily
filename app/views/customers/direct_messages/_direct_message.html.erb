@@ -1,13 +1,13 @@
 <p class="<%= direct_message.id %>" style= "color: white; margin-top: 0;">
-	<!--%= attachment_image_tag direct_message.user, :profile_image, fallback: "no_image.jpg", class:"profile-img-circle", size: "40x40" %-->
-	<%= direct_message.customer.first_name %><%= direct_message.customer.last_name %>
 </p>
-<p class="<%= direct_message.id %>">
-	<span class="balloon1-top">
-		<%= direct_message.message %><br>
-		<h7 style="color: #C0C0C0;"><%= direct_message.created_at.strftime("%Y-%m-%d %H:%M") %></h7>
-	</span>
-</p><br>
+	<p class="<%= direct_message.id %>">
+			<span class="balloon2-top">
+			　　<%= direct_message.message %><br>
+			</span>
+			<%= attachment_image_tag direct_message.customer, :profile_image, fallback: "no_image.jpg", size:"40x40" %><br>
+			<h7 style="color: #C0C0C0;"><%= direct_message.created_at.strftime("%H:%M") %></h7>
+	</p><br>
+
 
 <script>
 	var direct_message = <%= direct_message.customer.id %>;

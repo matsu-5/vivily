@@ -1,20 +1,24 @@
 <div class ="second_image">
+  <div class="top_third_image mx-auto"></div>
   <div class="content">
     <div class="container">
       <div class ="text-color">
         <div class="row">
-          <div class="col-md-9 col-md-offset-0">
-          <h1 class="new-topic">topic</h1>
-            <% @topics.each do |topic| %>
-              <div class="example">
-                  <p><%= topic.created_at.strftime('%Y/%m/%d') %></p><br>
-              <button type="button" class="btn-default">
-                <%= link_to customers_topic_path(topic) do %>
-                <%= topic.title %>
-                <% end %>
-              </button>
-               </div>
+          <div class="wrapper">
+            <div class="col-md-9 col-md-offset-2">
+            <h1 class="new-topic">topic</h1>
+              <% @topics.each do |topic| %>
+                <div class="example">
+                  <span class="fadeInUp">
+                    <p><%= topic.created_at.strftime('%Y/%m/%d') %></p><br>
+                <button type="button" class="btn-default">
+                  <%= link_to customers_topic_path(topic) do %>
+                  <%= topic.title %>
+                  <% end %>
+                </button>
+                 </div>
                 <hr>
+              </span>
             <% end %>
             <div class ="text-center back">
               <%= link_to 'All Topics', customers_topics_path, class: "btn-default" %>
@@ -23,36 +27,50 @@
       </div>
     </div>
   </div>
+  </div>
   <div class ="text-color">
-    <div class="col-md-9 col-md-offset-0">
-      <div class="video-content">
-        <h2 class="new-movie">Movie</h2>
-        <% @movie.each do |movie| %>
-        <div class = "movie">
-          <%= video_tag movie.movie.to_s, loop: false, controls: true, :playsinline => 'false', autoplay: false, size: "300×150", class: "content embed-responsive-video" %>
-        </div>
-        <% end %>
-          <div class ="text-center back">
-            <%= link_to 'All Movie', customers_movies_path, class: "btn-default" %>
+    <div class="row">
+      <div class="wrapper">
+        <div class="col-md-9 col-md-offset-2">
+          <div class="video-content">
+            <h2 class="new-movie">Movie</h2>
+            <% @movie.each do |movie| %>
+            <div class = "movie">
+              <span class="fadeInUp">
+                <%= video_tag movie.movie.to_s, loop: false, controls: true, :playsinline => 'false', autoplay: false, size: "300×150", class: "content embed-responsive-video" %>
+              </span>
+            </div>
+            <% end %>
+              <div class ="text-center back">
+                <%= link_to 'All Movie', customers_movies_path, class: "btn-default" %>
+              </div>
           </div>
+        </div>
+      </div>
     </div>
+  </div>
         <div class ="text-color">
-            <div class="col-md-9 col-md-offset-0">
-              <h1 class="new-live">Blog</h1>
-                <% @blog.each do |blog| %>
-                  <div class="example">
-                    <%= blog.created_at.strftime('%Y/%m/%d') %><br>
-                    <button type="button" class="btn btn-light">
-                      <%= link_to customers_blog_path(blog) do %>
-                        <%= blog.title %>
-                      <% end %>
-                    </button>
+          <div class="row">
+            <div class="wrapper">
+              <div class="col-md-9 col-md-offset-3">
+                <h1 class="new-live">Blog</h1>
+                  <% @blog.each do |blog| %>
+                    <div class="example">
+                      <span class="fadeInUp">
+                        <%= blog.created_at.strftime('%Y/%m/%d') %><br>
+                      <button type="button" class="btn btn-light">
+                        <%= link_to customers_blog_path(blog) do %>
+                          <%= blog.title %>
+                        <% end %>
+                      </button>
+                    </div>
+                    <hr>
+                  </span>
+                  <% end %>
+                  <div class="col-md-9 col-md-offset-7 back">
+                    <%= link_to 'All Blogs', customers_blogs_path, class: "btn-default" %>
                   </div>
-                  <hr>
-                <% end %>
-                <div class ="text-center back">
-                  <%= link_to 'All Blogs', customers_blogs_path, class: "btn-default" %>
-                </div>
+              </div>
             </div>
           </div>
         </div>

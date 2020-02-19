@@ -1,22 +1,63 @@
 <div class ="second_image">
   <div class="content">
     <div class ="text-color">
-      <h3>ユーザー詳細</h3>
-        <h2><%= @customer.first_name %><%= @customer.last_name %></h2>
-        <h2><%= @customer.email %></h2>
+      <div class="show-content">
+      <section class="container-fluid clearfix">
+      <h1 class="new-disc">Fans Details</h1>
+        <div class="row">
+          <div class="col-md-8 col-sm-offset-2 show-container">
+            <div class="row clearfix">
+              <div class="col-md-7">
+                <div class="item_show">
+                  <div class="item_show_image">
+                    <%= attachment_image_tag @customer, :profile_image, fallback: "no_image.jpg", size: "300x300", class: "center-block" %>
+                  </div>
+                </div>
+              </div>
 
-        <% unless @customer.id == current_customer.id %>
-          <% if @isRoom == true %>
-            <%= link_to "チャットへGo!", customers_room_path(@roomId) %>
-          <% else %>
-            <%= form_for @room,url:customers_rooms_path do |f| %>
-              <!--%= fields_for @entry do |e| %-->
-              <%= f.hidden_field :customer_id, :value=> @customer.id %>
-              <!--% end %-->
-              <%= f.submit "チャットを始める" %>
-            <% end %>
-          <% end %>
-        <% end %>
+              <div class="col-md-5">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>ニックネーム</th>
+                      <th><%= @customer.nickname %></th>
+                    </tr>
+                    <tr>
+                      <th>好きなアーティスト</th>
+                      <th><%= @customer.artist %></th>
+                    </tr>
+                    <tr>
+                      <th>好きなジャンル</th>
+                      <th>¥ <%= @customer.genre %>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th>最近言ったライブ</th>
+                      <th><%= @customer.live %></th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+          <hr>
+
+                <% unless @customer.id == current_customer.id %>
+                  <% if @isRoom == true %>
+                    <%= link_to "チャットへGo!", customers_room_path(@roomId) %>
+                  <% else %>
+                    <%= form_for @room,url:customers_rooms_path do |f| %>
+                      <!--%= fields_for @entry do |e| %-->
+                      <%= f.hidden_field :customer_id, :value=> @customer.id %>
+                      <!--% end %-->
+                      <%= f.submit "チャットを始める", class: "btn btn-block btn-light" %>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </div>
+</div>

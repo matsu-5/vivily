@@ -1,10 +1,42 @@
 <div class ="second_image">
   <div class="content">
-    <div class ="text-color">
-      <h3>ユーザ一覧</h3>
-        <% @customers.each do |customer| %>
-          <%= link_to "ユーザ名：#{customer.last_name} #{customer.first_name}", customers_customer_path(customer.id) %>
-        <% end %>
+  	<div class="tbody" style="width:100%; height: 700px;">
+      <div class="panel-body" ng-transclude>
+		<div class="col-md-12">
+		  <div class="panel-heading clearfix">
+		    <div class ="text-color">
+			  <h3 class="panel-title">crew details</h3>
+			</div>
+		    <div class="table-responsive">
+      	      <table class="table table-striped jambo_table buik_action">
+				  <thead>
+					<tr class="headings", style="font-size: 30px; color: white;">
+					  <div class ="text-color">
+						<th class="column-title", style="font-size: 20px; color: white;">profile image</th>
+						<th class="column-title", style="font-size: 20px; color: white;">Fan Name</th>
+						<th class="column-title", style="font-size: 20px; color: white;">favorite artist</th>
+						<th class="column-title", style="font-size: 20px; color: white;">follow</th>
+					  </div>
+				    </tr>
+				  </thead>
+			  <table class="table table-striped">
+			      <tbody>
+			        <% @customers.each do |customer| %>
+			        <tr class="even pointer">
+			            <td width="245"><%= attachment_image_tag customer, :profile_image, fallback: "no_image.jpg", size:"100x100" %></td>
+				      <div class ="text-color">
+				        <td width="200", style="font-size: 20px; color: white;"><%= link_to "#{customer.nickname}", customers_customer_path(customer.id) %></td>
+				        <td class="title", style="font-size: 20px; color: white;"><%= customer.artist %></td>
+				      </div>
+			        </tr>
+			        <% end %>
+			      </tbody>
+			   </table>
+		      </table>
+		    </div>
+	      </div>
+	    </div>
+	  </div>
     </div>
   </div>
 </div>

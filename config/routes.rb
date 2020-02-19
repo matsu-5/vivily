@@ -17,16 +17,17 @@ Rails.application.routes.draw do
   end
   root to: 'customers/homes#top'
   devise_for :admins, controllers: {
+    registrations: 'admin/registrations',
     sessions: 'admin/sessions',
     passwords: 'admin/passwords',
-    registrations: 'admin/registrations',
   }
 
   devise_for :customers, controllers: {
+    registrations: 'customers/registrations',
     sessions: 'customers/sessions',
     passwords: 'customers/passwords',
-    registrations: 'customers/registrations',
   }
+
   namespace :customer do
     get 'admins/edit'
     get 'admins/favorites'

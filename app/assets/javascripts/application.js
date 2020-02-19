@@ -57,7 +57,7 @@ $(function(){
 });
 
 //画像スライド
-$(document).ready(function(){
+jQuery(document).ready(function($){
   $('.bxslider').bxSlider({
     auto: true,           // 自動スライド
     speed: 1000,          // スライドするスピード

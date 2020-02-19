@@ -25,6 +25,7 @@ class Customer < ApplicationRecord
    has_many :entries
    has_many :direct_messages
    has_many :rooms, through: :entries
+   attachment :profile_image
 
   #validates :last_name, presence: true
   #validates :first_name, presence: true

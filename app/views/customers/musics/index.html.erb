@@ -2,17 +2,22 @@
   <div class="content">
     <div class="container">
       <div class ="text-color">
-  	    <div class="row">
-  	      <div class="col-md-9 col-md-offset-3">
-		    <h2 class="new-music">Music</h2>
-		      <% @music.each do |music| %>
-			    <image class="example_image">
-			      <%= link_to customers_music_path(music) do %>
-			        <%= attachment_image_tag music, :image, size: "300x300" %>
-		          <% end %>
-		        </image>
-		      <% end %>
-		    </div>
+        <div class="col-md-11 col-md-offset-2">
+  	      <div class="row">
+    		    <h2 class="new-music">Music</h2>
+          </div>
+            <div class="row">
+    		      <% @music.each do |music| %>
+      			    <image class="example_image">
+                  <figure class="snip1353">
+      			        <%= attachment_image_tag music, :image, size: "300x300" %>
+                    <figcaption>
+                        <h2> <%= link_to 'Play!!', customers_music_path(music) %></h2>
+                    </figcaption>
+                  </figure>
+      		      </image>
+    		      <% end %>
+    		    </div>
           </div>
         </div>
       </div>

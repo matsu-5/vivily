@@ -16,29 +16,24 @@
  */
 @import "bootstrap";
 @import "summernote-bs4";
-@import "bxslider";
 @import url('https://fonts.googleapis.com/css?family=Just+Another+Hand&display=swap');
 
 .btn-default{
-  background-image: image-url("IMG_6184.JPG");
+    background-image: image-url("IMG_6184.JPG");
 }
 
 .head_image {
-  background-image: image-url("IMG_6184.JPG");
-}
-
-.head_image {
-  background-image: image-url("IMG_6184.JPG");
+    background-image: image-url("IMG_6184.JPG");
     background-size: cover;
     background-position: center;
-    height: 200px
+    height: 140px;
 }
 
 .head_image2 {
     background-image: image-url("header_black.png");
     background-size: cover;
     background-position: center;
-    height: 200px
+    height: 140px;
 }
 
 .header {
@@ -65,29 +60,21 @@
     background-image: image-url("IMG_6194.JPG");
     background-size: cover;
     background-position: center;
-    height: 2200px
+    height: 2800px
 }
 
 .logo_image{
-	background-image: image-url("vivily_logo.png");
+	  background-image: image-url("vivily_logo.png");
     background-size: cover;
-    background-position: center;
     width: 200px;
     height: 120px;
-    float: left;
-    position: relative;
-    margin-top: 50px
 }
 
 .logo_image2{
     background-image: image-url("rogo_black.png");
     background-size: cover;
-    background-position: center;
     width: 200px;
     height: 120px;
-    float: left;
-    position: relative;
-    margin-top: 50px
 }
 
 .content {
@@ -218,6 +205,10 @@ img {
 .new-biography{
     font-family: 'Just Another Hand', cursive;
     font-size: 80px
+}
+.panel-title{
+  font-family: 'Just Another Hand', cursive;
+  font-size: 80px
 }
 
 .new-actions{
@@ -565,4 +556,59 @@ figure.snip1353.hover figcaption h2,{
 figure.snip1353:hover figcaption h2,
 figure.snip1353.hover figcaption h2 {
   opacity: 1;
+}
+//directmessageデザイン
+.balloon2-top {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 15px 1.5em 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 3px #555;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.balloon2-top:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -24px;
+  margin-top: -12px;
+  border: 12px solid transparent;
+  border-left: 12px solid #FFF;
+  z-index: 2;
+}
+
+.balloon2-top:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  margin-top: -14px;
+  border: 14px solid transparent;
+  border-left: 14px solid #555;
+  z-index: 1;
+}
+
+.balloon2-top p {
+  margin: 0;
+  padding: 0;
+}
+
+.top_third_image{
+    background-image: image-url("IMG_5215.JPG");
+    background-size: cover;
+    background-position: center;
+    height: 1108px;
+    width: 100%;
+}
+
+.showtime{
+  font-family: 'Just Another Hand', cursive;
+  font-size: 200px;
 }

@@ -33,55 +33,55 @@
   <div class="content">
     <%= link_to 'New Disc', new_admin_disc_path,class: "btn-circle-border-double" %>
     <div class="container">
-	  <div class="row">
-		<div class="col-md-9 col-md-offset-2">
-			<nav>
-      <ul class="float-right">
-      	<li>
-          <% @categories.each do |category| %>
-            <%= link_to "/admin/category/#{category.id}" do %>
-	        <%= category.name %>(<%= category.discs.count %>)
+  	  <div class="row">
+  		<div class="col-md-9 col-md-offset-2">
+  			<nav>
+        <ul class="float-right">
+        	<li>
+            <% @categories.each do |category| %>
+              <%= link_to "/admin/category/#{category.id}" do %>
+  	        <%= category.name %>(<%= category.discs.count %>)
+              <% end %>
             <% end %>
-          <% end %>
-        </li>
-      </ul>
-    </nav>
-	       <h2 class="new-disc">discography</h2>
-		   <% @disc.each do |disc| %>
-		     <image class="example_image">
-		  	     <%= link_to admin_disc_path(disc) do %>
-			     <%= attachment_image_tag disc, :image, size: "200x200" %>
-			     <% end %>
-		     </image>
-		   <% end %>
-		   <div class = "col-md-9 col-md-offset-5">
-		     <%= paginate @disc, class: "paginate" %>
-		   </div>
-	    </div>
-	</div>
-  </div>
+          </li>
+        </ul>
+      </nav>
+  	       <h2 class="new-disc">discography</h2>
+  		   <% @disc.each do |disc| %>
+  		     <image class="example_image">
+  		  	     <%= link_to admin_disc_path(disc) do %>
+  			     <%= attachment_image_tag disc, :image, size: "200x200" %>
+  			     <% end %>
+  		     </image>
+  		   <% end %>
+  		   <div class = "col-md-9 col-md-offset-5">
+  		     <%= paginate @disc, class: "paginate" %>
+  		   </div>
+  	    </div>
+  	  </div>
+    </div>
 
 <%= link_to 'New Music', new_admin_music_path,class: "btn-circle-border-double-second" %>
 
-  <div class="container">
-  	<div class="row">
-  	  <div class="col-md-9 col-md-offset-2">
-		<h2 class="new-music">music</h2>
-		  <% @music.each do |music| %>
-			  <image class="example_image">
-			    <%= link_to admin_music_path(music) do %>
-			    <%= attachment_image_tag music, :image, size: "200x200" %>
-		        <% end %>
-		      </image>
-		   <% end %>
-		   <div class = "col-md-9 col-md-offset-5">
-		     <%= paginate @music, class: "paginate" %>
-		  </div>
+      <div class="container">
+      	<div class="row">
+      	  <div class="col-md-9 col-md-offset-2">
+    		<h2 class="new-music">music</h2>
+    		  <% @music.each do |music| %>
+    			  <image class="example_image">
+    			    <%= link_to admin_music_path(music) do %>
+    			    <%= attachment_image_tag music, :image, size: "200x200" %>
+    		        <% end %>
+    		      </image>
+    		   <% end %>
+    		   <div class = "col-md-9 col-md-offset-5">
+    		     <%= paginate @music, class: "paginate" %>
+    		  </div>
+          </div>
+        </div>
       </div>
     </div>
-</div>
-</div>
-</div>
+  </div>
 </div>
 
 
