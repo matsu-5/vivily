@@ -1,7 +1,7 @@
 ☆サイトコンセプト
 日本中の音楽ファンを繋げるアーティストサイトです。
 
-![README](https://user-images.githubusercontent.com/57278128/73643501-f95f8380-46b6-11ea-8a6f-0898e794f29d.png)
+![README](https://user-images.githubusercontent.com/57278128/75010865-985eea80-54c1-11ea-9228-53041d586407.png)
 
 ☆サイト名
 vivily(アーティスト名)
