@@ -12,10 +12,8 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require jquery
 //= require jquery_ujs
-//= require bxslider
 //= require popper
 //= require bootstrap-sprockets
 //= require summernote/summernote-bs4.min
@@ -57,21 +55,17 @@ $(function(){
 });
 
 //画像スライド
-jQuery(document).ready(function($){
-  $('.bxslider').bxSlider({
-    auto: true,           // 自動スライド
-    speed: 1000,          // スライドするスピード
-    moveSlides: 1,        // 移動するスライド数
-    pause: 3000,          // 自動スライドの待ち時間
-    maxSlides: 1,         // 一度に表示させる最大数
-    slideWidth: 1500,      // 各スライドの幅
-  randomStart: true,    // 最初に表示するスライドをランダムに設定
-    autoHover: true,       // ホバー時に自動スライドを停止
-    slideMargin: 60,      // 余白
-    responsive: true,
-    slideZIndex: 50,
-  });
+$(function() {
+    $('.a').slick({
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true, //ドットのナビゲーションを表示
+        infinite: true, //スライドのループ有効化
+        fade: true, //フェードの有効化
+    });
 });
+
 
 /* Demo purposes only */
   $(".hover").mouseleave(
@@ -79,4 +73,3 @@ jQuery(document).ready(function($){
       $(this).removeClass("hover");
     }
   );
-

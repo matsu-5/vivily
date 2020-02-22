@@ -7,5 +7,6 @@ class Customers::MusicsController < ApplicationController
 
   def index
   	@music = Music.all
+  	@music = Music.page(params[:page]).per(8).order(created_at: "DESC")
   end
 end

@@ -600,16 +600,14 @@ figure.snip1353.hover figcaption h2 {
   padding: 0;
 }
 
-.top_third_image{
-    background-image: image-url("IMG_5215.JPG");
-    background-size: cover;
-    background-position: center;
-    height: 1108px;
-    width: 100%;
-}
-
 .showtime{
   font-family: 'Just Another Hand', cursive;
   font-size: 200px;
 }
 
+.a {
+  max-width: 1000px; margin: 0 auto 50px; padding: 30px; height: auto;
+}
+.a img{
+  width: 100%;
+}

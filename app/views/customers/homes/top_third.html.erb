@@ -1,5 +1,9 @@
 <div class ="second_image">
-  <div class="top_third_image mx-auto"></div>
+  <div class="a">
+      <%= image_tag 'cache_Messagep567359.jpg' %>
+      <%= image_tag 'IMG_5215.JPG' %>
+      <%= image_tag 'Snapseed.jpg' %>
+    </div>
   <div class="content">
     <div class="container">
       <div class ="text-color">
@@ -10,9 +14,11 @@
               <% @topics.each do |topic| %>
                 <div class="example">
                   <span class="fadeInUp">
-                    <p><%= topic.created_at.strftime('%Y/%m/%d') %></p><br>
                 <button type="button" class="btn-default">
                   <%= link_to customers_topic_path(topic) do %>
+                  <div class="text-left">
+                    <%= topic.created_at.strftime('%Y/%m/%d') %>
+                  </div>
                   <%= topic.title %>
                   <% end %>
                 </button>
@@ -57,9 +63,11 @@
                   <% @blog.each do |blog| %>
                     <div class="example">
                       <span class="fadeInUp">
-                        <%= blog.created_at.strftime('%Y/%m/%d') %><br>
                       <button type="button" class="btn btn-light">
                         <%= link_to customers_blog_path(blog) do %>
+                        <div class="text-left">
+                          <%= blog.created_at.strftime('%Y/%m/%d') %>
+                        </div>
                           <%= blog.title %>
                         <% end %>
                       </button>
