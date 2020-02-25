@@ -3,7 +3,7 @@
     <div class="container">
       <div class ="text-color">
         <div class="row">
-          <div class="col-md-9 col-md-offset-3">
+          <div class="col-md-9 col-md-offset-1">
           <h1 class="new-live">Blog</h1>
             <% @blog.each do |blog| %>
               <div class="example">
@@ -12,7 +12,9 @@
                     <%= blog.created_at.strftime('%Y/%m/%d') %><br>
                   </div>
                   <%= link_to customers_blog_path(blog) do %>
+                  <div class="news-title">
                     <%= blog.title %>
+                  </div>
                   <% end %>
               </button>
               </div>
