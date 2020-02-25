@@ -1,20 +1,34 @@
     <div class="top_image">
      <div class="container">
-        <div class="row">
+       <div class="row">
          <div class="wrapper">
-          <div class="col-md-9 col-md-offset-0">
+          <div class="col-md-9 col-md-offset-2">
           	<h1 class="new-biography">Biography</h1>
 	        <div class="video">
 	          <span class="fadeInUp">
-		      <%= video_tag "about_us_01.mp4", class: "landing_video", autoplay: true, loop: true, muted: true, :size => 30*30 %>
-				<h5 class="text-center", style="font-size: 30px; color: black;"> 2017年4月結成、モーショングラフィックスやCGなどの特殊な映像と曲の世界観を融合させた<br>
-			    エレクトロニックバンドvivily。大阪府内ライブハウス、イベントを中心に活動。ボーカルKDが<br>
-			    作詞作曲を手掛ける。ギターTeppeiは作曲を手掛け、動画クリエイターとしても活動中。<br>
-                昨年8月、Youtubeにて「腐敗神話」トレーラー公開。</h5>
+		        <%= video_tag "about_us_01.mp4", class: "landing_video", autoplay: true, loop: true, muted: true %>
+		        <table class="table">
+		        	<thead>
+		        		<tr>
+				          <h1 class="logo text-center">vivily</h1>
+				          <h2 class="member text-center">member</h2>
+				          <th class="member-name text-center">Dr.Kouhei<a href="https://twitter.com/nissy7104" class="fab fa-twitter-square fa-2x"></a><a href="https://www.instagram.com/nissy104/?hl=ja" class="fab fa-instagram fa-2x"></a></th>
+				          <th class="member-name text-center">Vo.Gt.KD<a href="https://twitter.com/vivilygtvo" class="fab fa-twitter-square fa-2x"></a><a href="https://www.instagram.com/vivily_official/" class="fab fa-instagram fa-2x"></a></th>
+				          <th class="member-name text-center">Gt.Teppei<a href="https://twitter.com/vvl_tp" class="fab fa-twitter-square fa-2x"></a><a href="https://www.instagram.com/teppei_rr/?hl=ja" class="fab fa-instagram fa-2x"></a></th>
+				          <th class="member-name text-center">Ba.KAZU<a href="https://twitter.com/saqwet" class="fab fa-twitter-square fa-2x"></a><a href="https://www.instagram.com/k.z_vivily/?hl=ja" class="fab fa-instagram fa-2x"></a></th>
+		                </tr>
+		            </thead>
+                </table>
+				<p class=" artist-detail text-center", style="color: black;"> 2017年4月結成、モーショングラフィックスやCGなどの特殊な映像と曲の世界観を融合させた
+			    エレクトロニックバンドvivily。大阪府内ライブハウス、イベントを中心に活動。ボーカルKDが
+			    作詞作曲を手掛ける。ギターTeppeiは作曲を手掛け、動画クリエイターとしても活動中。
                </span>
 			</div>
-		    </div>
-		   </div>
-	     </div>
-       </div>
-     </div>
+                <div class ="back text-center">
+                  <%= link_to 'Back', customers_homes_top_second_path, class: "btn-default" %>
+                </div>
+		  </div>
+		</div>
+	   </div>
+      </div>
+    </div>

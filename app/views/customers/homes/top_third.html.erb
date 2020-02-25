@@ -3,7 +3,7 @@
       <%= image_tag 'cache_Messagep567359.jpg' %>
       <%= image_tag 'IMG_5215.JPG' %>
       <%= image_tag 'Snapseed.jpg' %>
-    </div>
+  </div>
   <div class="content">
     <div class="container">
       <div class ="text-color">
@@ -14,7 +14,7 @@
               <% @topics.each do |topic| %>
                 <div class="example">
                   <span class="fadeInUp">
-                <button type="button" class="btn-default">
+                <button type="button" class="btn btn06">
                   <%= link_to customers_topic_path(topic) do %>
                   <div class="text-left">
                     <%= topic.created_at.strftime('%Y/%m/%d') %>
@@ -22,9 +22,9 @@
                   <%= topic.title %>
                   <% end %>
                 </button>
+                </span>
                  </div>
                 <hr>
-              </span>
             <% end %>
             <div class ="text-center back">
               <%= link_to 'All Topics', customers_topics_path, class: "btn-default" %>
@@ -32,7 +32,6 @@
         </div>
       </div>
     </div>
-  </div>
   </div>
   <div class ="text-color">
     <div class="row">
@@ -58,12 +57,12 @@
         <div class ="text-color">
           <div class="row">
             <div class="wrapper">
-              <div class="col-md-9 col-md-offset-3">
-                <h1 class="new-live">Blog</h1>
+              <div class="col-md-9 col-md-offset-2">
+                <h1 class="new-topic">Blog</h1>
                   <% @blog.each do |blog| %>
                     <div class="example">
                       <span class="fadeInUp">
-                      <button type="button" class="btn btn-light">
+                      <button type="button" class="btn btn06">
                         <%= link_to customers_blog_path(blog) do %>
                         <div class="text-left">
                           <%= blog.created_at.strftime('%Y/%m/%d') %>
@@ -71,11 +70,11 @@
                           <%= blog.title %>
                         <% end %>
                       </button>
+                      </span>
                     </div>
                     <hr>
-                  </span>
                   <% end %>
-                  <div class="col-md-9 col-md-offset-7 back">
+                  <div class="text-center back">
                     <%= link_to 'All Blogs', customers_blogs_path, class: "btn-default" %>
                   </div>
               </div>

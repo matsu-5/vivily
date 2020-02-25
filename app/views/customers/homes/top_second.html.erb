@@ -13,7 +13,7 @@
             <% @information.each do |information| %>
               <div class="example">
                 <span class="fadeInUp">
-                  <button type="button" class="btn btn-light">
+                  <button type="button" class="btn btn05">
                     <%= link_to customers_information_path(information) do %>
                       <div class="text-left">
                         <%= information.created_at.strftime('%Y/%m/%d') %><br>
@@ -25,7 +25,7 @@
                 </span>
               </div>
              <% end %>
-                  <div class ="col-md-9 col-md-offset-8 back">
+                  <div class ="back text-center">
                     <span class="fadeInUp">
                       <%= link_to 'All News', customers_informations_path, class: "btn-default" %>
                     </span>
@@ -45,7 +45,7 @@
                 </span>
                </div>
                <% end %>
-                <div class ="text-center back">
+                <div class ="back text-center">
                   <span class="fadeInUp">
                     <%= link_to 'All Videos', customers_videos_path, class: "btn-default" %>
                   </span>
@@ -61,7 +61,7 @@
               <% @live.each do |live| %>
                 <div class="example">
                   <span class="fadeInUp">
-                    <button type="button" class="btn btn-light">
+                    <button type="button" class="btn btn05">
                       <%= link_to customers_life_path(live) do %>
                         <div class="text-left">
                           <%= live.created_at.strftime('%Y/%m/%d') %><br>
@@ -73,7 +73,7 @@
                 </div>
                 <hr>
               <% end %>
-              <div class ="col-md-9 col-md-offset-6 back">
+              <div class ="back text-center">
                 <span class="fadeInUp">
                   <%= link_to 'All Live', customers_lives_path, class: "btn-default" %>
                 </span>

@@ -13,7 +13,7 @@
                       <%= form_for(@customer,url: customers_customer_path) do |f| %>
                           <div class="form group">
                               <div class="form-inline">
-                               <button type="button" class="col-lg-2 btn-xs btn-dark show-btn" disabled="disabled">プロフィール画像</button>
+                               <button type="button" class="col-lg-2 btn btn-xs btn-dark show-btn" disabled="disabled">プロフィール画像</button>
                                  <div class="col-sm-10" style= "padding:13px;">
                                   <%= f.attachment_field :profile_image %>
                                  </div>
@@ -21,7 +21,7 @@
                           </div>
                           <div class="form group">
                             <div class="form-inline">
-                              <button type="button" class=" col-sm-2 btn-xs btn-dark show-btn" disabled="disabled">お名前</button>
+                              <button type="button" class=" col-sm-2 btn btn-xs btn-dark show-btn" disabled="disabled">お名前</button>
                               <div class="col-sm-10"style= "padding:0px,2px;">
                                 <%= f.text_field :last_name,id:"customer_last_name",placeholder:"名前",rows: 7,class: "form-control", :size => "10*10" %>
                                 <%= f.text_field :first_name,id:"customer_first_name",placeholder:"名前",rows: 7,class: "form-control",:size => "10*10"%>
@@ -29,7 +29,7 @@
                           </div>
                             <div class="form group">
                               <div class="form-inline">
-                                <button type="button" class=" col-sm-2 btn-xs btn-dark show-btn" disabled="disabled">お名前(カナ)</button>
+                                <button type="button" class=" col-sm-2 btn btn-xs btn-dark show-btn" disabled="disabled">お名前(カナ)</button>
                               <div class="col-sm-10" style= "padding:15px;">
                                 <%= f.text_field :last_name_kana,id:"customer_last_name_kana",placeholder:"名前（カナ）",rows: 7,class: "form-control",:size => "10*10"%>
                                 <%= f.text_field :first_name_kana,id:"customer_first_name_kana",placeholder:"名前（カナ）",rows: 7,class: "form-control",:size => "10*10"%>
@@ -38,7 +38,7 @@
                            </div>
                            <div class="form group">
                               <div class="form-inline">
-                               <button type="button" class="col-lg-2 btn-lg btn-dark show-btn" disabled="disabled">ニックネーム</button>
+                               <button type="button" class="col-lg-2 btn btn-lg btn-dark show-btn" disabled="disabled">ニックネーム</button>
                                  <div class="col-sm-10" style= "padding:10px;">
                                   <%= f.text_field :nickname,id:"customer_email",placeholder:"ニックネーム",rows: 7,class: "form-control"%>
                                  </div>
@@ -58,7 +58,7 @@
                             </div>
                             <div class="form group">
                               <div class="form-inline">
-                                <button type="button" class="col-lg-2 btn-xs btn-dark show-btn" disabled="disabled">電話番号</button>
+                                <button type="button" class="col-lg-2 btn btn-xs btn-dark show-btn" disabled="disabled">電話番号</button>
                                 <div class="col-sm-10" style= "padding:0px,3px;">
                                   <%= f.text_field :phone_number,id:"customer_phone_number",placeholder:"電話番号",rows: 7,class: "form-control",:size => "10*10"%>
                                 </div>
@@ -66,7 +66,7 @@
                             </div>
                             <div class="form group">
                               <div class="form-inline">
-                               <button type="button" class="col-lg-2 btn-xs btn-dark show-btn" disabled="disabled">email</button>
+                               <button type="button" class="col-lg-2 btn btn-xs btn-dark show-btn" disabled="disabled">email</button>
                                  <div class="col-sm-10" style= "padding:10px;">
                                   <%= f.text_field :email,id:"customer_email",placeholder:"メールアドレス",rows: 7,class: "form-control"%>
                                  </div>
@@ -74,7 +74,7 @@
                             </div>
                             <div class="form group">
                               <div class="form-inline">
-                               <button type="button" class="col-lg-2 btn-xs btn-dark show-btn" disabled="disabled">好きなアーティスト</button>
+                               <button type="button" class="col-lg-2 btn btn-xs btn-dark show-btn" disabled="disabled">好きなアーティスト</button>
                                  <div class="col-sm-10" style= "padding:10px;">
                                   <%= f.text_field :artist,id:"customer_email",placeholder:"好きなアーティスト",rows: 7,class: "form-control"%>
                                  </div>
@@ -82,7 +82,7 @@
                           　</div>
                           　<div class="form group">
                               <div class="form-inline">
-                               <button type="button" class="col-lg-2 btn-lg btn-dark show-btn" disabled="disabled">好きなジャンル</button>
+                               <button type="button" class="col-lg-2 btn btn-lg btn-dark show-btn" disabled="disabled">好きなジャンル</button>
                                  <div class="col-sm-10" style= "padding:10px;">
                                   <%= f.text_field :genre,id:"customer_email",placeholder:"好きなジャンル",rows: 7,class: "form-control"%>
                                  </div>
@@ -90,7 +90,7 @@
                           　</div>
                             <div class="form group">
                               <div class="form-inline">
-                               <button type="button" class="col-lg-2 btn-lg btn-dark show-btn" disabled="disabled">最近行ったライブ</button>
+                               <button type="button" class="col-lg-2 btn btn-lg btn-dark show-btn" disabled="disabled">最近行ったライブ</button>
                                  <div class="col-sm-10" style= "padding:10px;">
                                   <%= f.text_field :live,id:"customer_email",placeholder:"最近行ったライブ",rows: 7,class: "form-control"%>
                                  </div>

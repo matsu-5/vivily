@@ -1,44 +1,44 @@
 <div class="top_image">
   <div class="content">
     <div class="show-content">
-  <section class="container-fluid clearfix">
-	<h1 class="new-disc">Discography</h1>
-		<div class="row">
-			<div class="col-md-8 col-sm-offset-2 show-container">
-				<div class="row clearfix">
-					<div class="col-md-7">
-						<div class="item_show">
-							<div class="item_show_image">
-								<%= attachment_image_tag @disc, :image, size: "300x300", class: "center-block" %>
+	  <section class="container-fluid clearfix">
+		<h1 class="new-disc">Discography</h1>
+			<div class="row">
+				<div class="col-md-8 col-sm-offset-2 show-container">
+					<div class="row clearfix">
+						<div class="col-md-7">
+							<div class="item_show">
+								<div class="item_show_image">
+									<%= attachment_image_tag @disc, :image, size: "300x300", class: "center-block" %>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="col-md-5">
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th>シングル<br>アルバム名</th>
-									<th><%= @disc.name %></th>
-								</tr>
-								<tr>
-									<th>CD種別</th>
-									<th><%= @disc.category.name %></th>
-								</tr>
-								<tr>
-									<th>価格(税込)</th>
-									<th>¥ <%= @disc.price %>
-									</th>
-								</tr>
-								<tr>
-									<th>発売日</th>
-									<th><%= @disc.release_date %></th>
-								</tr>
-							</thead>
-						</table>
-					</div>
-		        </div>
-		        <hr>
+						<div class="col-md-5">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>シングル<br>アルバム名</th>
+										<th><%= @disc.name %></th>
+									</tr>
+									<tr>
+										<th>CD種別</th>
+										<th><%= @disc.category.name %></th>
+									</tr>
+									<tr>
+										<th>価格(税込)</th>
+										<th>¥ <%= @disc.price %>
+										</th>
+									</tr>
+									<tr>
+										<th>発売日</th>
+										<th><%= @disc.release_date %></th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+			        </div>
+			        <hr>
 
 
 					<div class="row">
