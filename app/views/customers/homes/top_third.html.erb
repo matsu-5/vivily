@@ -44,7 +44,7 @@
             <% @movie.each do |movie| %>
             <div class = "movie">
               <span class="fadeInUp">
-                <%= video_tag movie.movie.to_s, loop: false, controls: true, :playsinline => 'false', autoplay: false, size: "300×150", class: "content embed-responsive-video" %>
+                <%= video_tag movie.movie.to_s, loop: false, controls: true, :playsinline => 'false', autoplay: false, size: "300×150", poster: "IMG_4438.jpg", class: "content embed-responsive-video" %>
               </span>
             </div>
             <% end %>
