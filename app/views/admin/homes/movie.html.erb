@@ -9,7 +9,7 @@
           <% @video.each do |video| %>
             <image class="img-fluid">
             	<%= link_to admin_video_path(video) do %>
-			    <%= attachment_image_tag video, :image, size: "200x200" %>
+			    <%= attachment_image_tag video, :image, size: "300x169" %>
 			    <% end %>
 			</image>
           <% end %>
@@ -29,7 +29,7 @@
             <% @movie.each do |movie| %>
               <image class="img-fluid">
             	<%= link_to admin_movie_path(movie) do %>
-			    <%= attachment_image_tag movie, :image, size: "200x200" %>
+			    <%= attachment_image_tag movie, :image, size: "300x169" %>
 			    <% end %>
 			  </image>
             <% end %>

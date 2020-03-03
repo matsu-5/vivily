@@ -9,10 +9,12 @@
             <div class="row">
     		      <% @music.each do |music| %>
       			    <image class="example_image">
-                  <figure class="snip1353">
+                  <figure class="snip1283">
       			        <%= attachment_image_tag music, :image, size: "300x300" %>
                     <figcaption>
-                        <h2> <%= link_to 'Play!!', customers_music_path(music) %></h2>
+                      <div class="read-more">
+                        <%= link_to 'Go to Detail Page!!', customers_music_path(music) %>
+                      </div>
                     </figcaption>
                   </figure>
       		      </image>
