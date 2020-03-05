@@ -2,21 +2,21 @@
   <section class="container clearfix">
     <div class="row">
       <%= form_for @live,url:admin_lives_path do |f| %>
-      <div class="col-md-9 col-md-offset-3 new-container">
+      <div class="col-md-12 col-md-offset-12 new-container">
         <h1 class="new-topic text-center">New Live</h1>
           <hr>
-          <div class="col-md-9 col-md-offset-2">
+          <div class="col-md-12 col-md-offset-0">
             <div class="row">
               <b>Live Title</b>
                 <%= f.text_field :title, class:"form-control", placeholder: "live title"  %>
-              <b>Live Detail</b>
+              <b>Live Detail</br>
                 <%= f.text_area :details, 'data-provider': :summernote, src: "./js/summernote/lang/summernote-ja-JP.js" %>
             </div>
               <div class="new-actions">
                 <%= f.submit "save", class:"btn btn-dark btn-lg btn-block"%>
               </div>
       <% end %>
-              <div class="col-md-9 col-md-offset-5">
+              <div class="text-center">
                 <div class ="back">
                   <%= link_to 'Back', admin_homes_live_path, class: "btn-default" %>
                 </div>

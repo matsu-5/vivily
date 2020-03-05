@@ -11,13 +11,14 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require activestorage
 //= require jquery
 //= require jquery_ujs
 //= require popper
 //= require bootstrap-sprockets
 //= require summernote/summernote-bs4.min
 //= require summernote-init
+//= require activestorage
+//= require turbolinks
 //= require cocoon
 //= require_tree .
 
@@ -55,7 +56,7 @@ $(function(){
 });
 
 //画像スライド
-$(function() {
+$(document).on("turbolinks:load", function() {
     $('.a').slick({
         dots: true,
         autoplay: true,
