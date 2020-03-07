@@ -5,20 +5,24 @@
     <div class="content">
      <div class="container">
         <div class="row">
-          <div class="col-md-8 col-md-offset-3">
+          <div class="col-md-9 col-md-offset-2">
           <h1 class="new-information">information</h1>
             <% @information.each do |information| %>
               <div class="example">
-                <p><%= information.created_at.strftime('%Y/%m/%d') %></p><br>
                 <button type="button" class="btn btn-light">
                   <%= link_to admin_information_path(information) do %>
-                  <%= information.title %>
+                    <div class="text-left">
+                      <%= information.created_at.strftime('%Y/%m/%d') %><br>
+                    </div>
+                    <div class="news-title">
+                      <%= information.title %>
+                    </div>
                   <% end %>
                 </button>
-                </div>
-                <hr>
+              </div>
+              <hr>
             <% end %>
-            <div class = "col-md-9 col-md-offset-5">
+            <div class = "col-md-9 col-md-offset-3">
               <%= paginate @information, class: "paginate" %>
             </div>
           </div>
@@ -30,20 +34,24 @@
 
     <div class="container">
         <div class="row">
-          <div class="col-md-8 col-md-offset-3">
+          <div class="col-md-9 col-md-offset-2">
           <h1 class="new-topic">topic</h1>
             <% @topics.each do |topic| %>
               <div class="example">
-                  <p><%= topic.created_at.strftime('%Y/%m/%d') %></p><br>
-              <button type="button" class="btn btn-light">
-                <%= link_to admin_topic_path(topic) do %>
-                <%= topic.title %>
+                <button type="button" class="btn btn-light">
+                  <div class="text-left">
+                    <%= topic.created_at.strftime('%Y/%m/%d') %><br>
+                  </div>
+                  <%= link_to admin_topic_path(topic) do %>
+                  <div class="news-title">
+                    <%= topic.title %>
+                  </div>
                 <% end %>
-              </button>
+                </button>
                </div>
                 <hr>
             <% end %>
-            <div class = "col-md-9 col-md-offset-5">
+            <div class = "col-md-9 col-md-offset-3">
               <%= paginate @topics, class: "paginate" %>
             </div>
         </div>

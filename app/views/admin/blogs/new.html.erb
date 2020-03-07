@@ -2,10 +2,10 @@
   <section class="container clearfix">
     <div class="row">
       <%= form_for @blog,url:admin_blogs_path do |f| %>
-      <div class="col-md-12 col-md-offset-12 new-container">
+      <div class="col-md-12 col-md-offset-4 new-container">
         <h1 class="new-movie text-center">New Blog</h1>
         <hr>
-          <div class="col-md-12 col-md-offset-0">
+          <div class="col-md-9 col-md-offset-2">
             <div class = "row">
                 <b>Blog Title</b>
                   <%= f.text_field :title, class:"form-control", placeholder: "blog title"  %>

@@ -4,20 +4,24 @@
 
 <div class="container">
         <div class="row">
-          <div class="col-md-9 col-md-offset-0">
+          <div class="col-md-9 col-md-offset-2">
           <h1 class="new-live">live</h1>
             <% @live.each do |live| %>
               <div class="example">
-                <%= live.created_at.strftime('%Y/%m/%d') %><br>
                 <button type="button" class="btn btn-light">
-                <%= link_to admin_life_path(live) do %>
-                <%= live.title %>
+                  <%= link_to admin_life_path(live) do %>
+                    <div class="text-left">
+                      <%= live.created_at.strftime('%Y/%m/%d') %><br>
+                    </div>
+                    <div class="news-title">
+                      <%= live.title %>
+                    </div>
                 <% end %>
               </button>
               </div>
                 <hr>
             <% end %>
-            <div class = "col-md-9 col-md-offset-5">
+            <div class = "col-md-9 col-md-offset-3">
               <%= paginate @live, class: "paginate" %>
             </div>
           </div>
